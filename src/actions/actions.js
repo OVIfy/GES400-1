@@ -23,7 +23,8 @@ export async function createAction({request}) {
     updates.start = startDate.toISOString() //setting start date to form acceptable by strapi server
     updates.createdby.connect = [Number(getUserFromSession()?.id)]
 
-        updates.tickettypes = []
+    updates.tickettypes = []
+    updates.live = false
 
         //massive code bruh, I deserve a pat on the back!!
         for (const [key, value] of Object.entries(updates)) {
