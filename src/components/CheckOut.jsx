@@ -48,7 +48,7 @@ const CheckOut = ({ onClose, setSwitchModal, eventID, ticketPrice, ticketType })
                     className="hidden"
                   />
                   <input
-                    type="text"
+                    type="number"
                     name="price"
                     id=""
                     defaultValue={ticketPrice}
@@ -114,9 +114,9 @@ const CheckOut = ({ onClose, setSwitchModal, eventID, ticketPrice, ticketType })
             <img src={bck} alt="" className="summary_image"/>
             <h3 className="summary_head">Order summary</h3>
             <span className="summary_details">
-              <p>1x Regular Ticket</p>
+              <p>1x {ticketType}</p>
               <span>
-                <p>{'#' + ticketPrice}</p>
+                <p>#{ticketPrice}</p>
               </span>
             </span>
             {/* <span className="summary_details">

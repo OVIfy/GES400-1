@@ -32,12 +32,13 @@ function EventPage() {
 
   //ticket logic
   const [currentTicketIndex, setCurrTicketIndex] = useState(0)
-  const [tickets, setTickets] = useState(null)
+  const [tickets, setTickets] = useState([{tt : "Regular", tp : 500}, {tt : "Silver", tp : 200}])
   
   useEffect(()=>{
     if(data?.data?.attributes) setEvent(data.data.attributes)
-    setTickets(data?.data?.attributes?.tickettypes)
-    console.log(data?.data?.attributes?.tickettypes)
+    if(data?.data?.attributes?.tickettypes?.length > 0) setTickets(data?.data?.attributes?.tickettypes)
+    console.log(data?.data?.attributes?.tickettype)
+    console.log(tickets)
   }, [data])
 
   const Slide = () => {
@@ -70,11 +71,13 @@ function EventPage() {
   function increaseCurrentTicketIndex(){
     if(currentTicketIndex != tickets.length - 1)
       setCurrTicketIndex(currentTicketIndex + 1)
+    else setCurrTicketIndex(0)
   }
 
   function decreaseCurrentTicketIndex(){
     if(currentTicketIndex != 0)
       setCurrTicketIndex(currentTicketIndex - 1)
+    else setCurrTicketIndex(tickets.length - 1)
   }
 
   return (
@@ -187,7 +190,7 @@ function EventPage() {
         }
       </div>
       {/* {isModalOpen && <CheckOut setIsModalOpen={setIsModalOpen} />} */}
-      {event && <Modal ticketPrice={tickets[currentTicketIndex]?.tp || '100'} ticketType={tickets[currentTicketIndex]?.tt || 'classic'} eventID={data?.data?.id} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
+      {event && <Modal ticketPrice={tickets[currentTicketIndex]?.tp} ticketType={tickets[currentTicketIndex]?.tt} eventID={data?.data?.id} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />}
     </div>
   );
 }

@@ -38,6 +38,7 @@ const EventAnalytics = () => {
         if(eventId){ //if eventID is present
             setIsLiveStatusLoading(true)
             let newVal = !event.live
+            console.log(newVal)
             await axios.put(import.meta.env.VITE_SERVER_URL  + `/api/events/${eventId}`, {data : {live : newVal}}, {
                 headers:{
                     'Authorization' : 'Bearer ' + getUserFromSession()?.token
