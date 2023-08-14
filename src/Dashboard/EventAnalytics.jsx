@@ -125,7 +125,7 @@ const EventAnalytics = () => {
                     </tr>
                     )
                 }
-                {/* <span className='space'>.</span> */}
+                <span className='space'>.</span>
             </table> 
         </div>}
     </div>

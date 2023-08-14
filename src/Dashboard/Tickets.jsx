@@ -47,7 +47,7 @@ const Tickets = (props) => {
                       ticketId={ticket?.id}
                     />
                   )
-                    : <p>You do not have any Tickets yet, Register for an event to get one</p>
+                    : <p className="tickets_text">You do not have any Tickets yet, Register for an event to get one</p>
               }
                           
             </div>

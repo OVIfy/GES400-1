@@ -1,15 +1,15 @@
 import "./EditProfile.css"
 import plus1 from "../assets/plus1.svg"
 import plus2 from "../assets/plus2.svg"
-import prince from "../assets/prince.png"
-import back from "../assets/bckgrnd.png"
+import default1 from "../assets/default1.png"
+import default2 from "../assets/default2.jpeg"
 import { useEffect, useState } from "react"
 import { Form } from "react-router-dom"
 import { Spinner } from "flowbite-react"
 
 const EditProfile = ({isOpen, onClose, username, twitter, instagram, facebook, website, bio, phone, loading}) => {
-    const [cover, setCover] = useState(prince)
-    const [profile, setProfile] = useState(prince)
+    const [cover, setCover] = useState(default2)
+    const [profile, setProfile] = useState(default1)
     const [didPictureChange, setDidPictureChange] = useState({cover : false, profile : false})
     const [formSubmitted, setFormSubmitted] = useState(false)
 
@@ -35,7 +35,7 @@ const EditProfile = ({isOpen, onClose, username, twitter, instagram, facebook, w
 
   return (<>
     {isOpen && <Form method="POST" encType="multipart/form-data" className='edit_profile_page' onSubmit={afterFormSubmit}>
-        <div className="overlay" onClick={onClose}>
+        <div className="overlays" onClick={onClose}>
             <div className="edit_profile_section" onClick={(e) => e.stopPropagation()}>
                 <div className='eprofile_section1'>
                     <div className="profile_background">
@@ -89,7 +89,7 @@ const EditProfile = ({isOpen, onClose, username, twitter, instagram, facebook, w
 
                 <input className="hidden" readOnly type="checkbox" checked={didPictureChange.cover} name="is_cover_choosen"/>
                 <input className="hidden" readOnly type="checkbox" checked={didPictureChange.profile} name="is_profile_choosen"/>
-                <div className="update_div"><button className='bg-white px-2'>Update {formSubmitted && <Spinner className="ml-2" size="sm"/>}</button></div>
+                <div className="update_div"><button className='bg-white px-2 update_button'>Update {formSubmitted && <Spinner className="ml-2" size="sm"/>}</button></div>
             </div>
         </div>
 

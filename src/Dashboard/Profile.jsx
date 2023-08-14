@@ -1,6 +1,7 @@
 import "./Profile.css"
 import { getUserFromSession } from "../hooks/hooks"
-import prince from "../assets/bckgrnd.png"
+import default1 from "../assets/default1.png"
+import default2 from "../assets/default2.jpeg"
 // import back from "../assets/bckgrnd.png"
 import { GoPencil } from "react-icons/go";
 import { AiOutlineLink, AiOutlineInstagram } from "react-icons/ai";
@@ -51,9 +52,9 @@ const Profile = () => {
     <div className='profile'>
       <div className='profile_section'>
         <div className='profile_section1'>
-            <img className='back_picture' alt="pic" src={user?.cover?.url || prince}/>
+            <img className='back_picture' alt="pic" src={user?.cover?.url || default2}/>
             <div className="profile_picture_div">
-              <img className='profile_picture' alt='pic' src={user?.profile?.url || prince}/>
+              <img className='profile_picture' alt='pic' src={user?.profile?.url || default1}/>
               <Spinner size="md"/>
             </div>
         </div>

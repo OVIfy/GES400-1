@@ -66,7 +66,7 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: 65% 32%;
-  grid-template-rows: 30rem 20rem;
+  grid-template-rows: fit-content fit-content;
   justify-content: space-between;
   gap: 1.5rem;
 }
@@ -296,7 +296,7 @@
   }
   .In-person_event {
     grid-template-columns: 65% 34%;
-    grid-template-rows: 28rem 20rem;
+    grid-template-rows: fit-content fit-content;
     gap: 1rem;
     box-sizing: border-box;
   }
@@ -329,7 +329,7 @@
 @media only screen and (max-width: 668px){
   .In-person_event {
     grid-template-columns: 100%;
-    grid-template-rows: 25rem 20rem 18rem;
+    grid-template-rows: fit-content fit-content fit-content;
   }
   .Tickets {
     grid-column-start: 1;

@@ -3,7 +3,7 @@
     background: #133c55;
     height: 100%;
     width: 18%;
-    padding: 3% 0;
+    padding: 4% 0;
     box-sizing: border-box;
     position: fixed;
     z-index: 100;
@@ -76,7 +76,7 @@
     border-radius: 0rem 0.625rem 0.625rem 0rem;
 }
 .logos{
-    width: 60%;
+    width: 55%;
 }
 @media only screen and (max-width: 943px){
     .sidenav{

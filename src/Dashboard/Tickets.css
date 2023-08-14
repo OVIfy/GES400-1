@@ -60,9 +60,12 @@
   font-size: .85rem;
   color: var(--text-color, #133c55);
 }
-
+.tickets_text{
+  font-size: .8rem;
+  width: 100%;
+}
 @media only screen and (max-width: 943px){
-  .ticket_type, .ticket_id, .ticket_owner, .ticket_price {
+  .ticket_type, .ticket_id, .ticket_owner, .ticket_price, .tickets_text {
       font-size: .7rem;
   }
   .ticket_name{
@@ -73,7 +76,7 @@
   }
 }
 @media only screen and (max-width: 568px){
-  .ticket_type, .ticket_id, .ticket_owner, .ticket_price{
+  .ticket_type, .ticket_id, .ticket_owner, .ticket_price, .tickets_text{
       font-size: .6rem;
   }
   .ticket_name{
@@ -86,7 +89,7 @@
   }
 }
 @media only screen and (max-width: 468px){
-  .ticket_type, .ticket_id, .ticket_owner, .ticket_price{
+  .ticket_type, .ticket_id, .ticket_owner, .ticket_price, .tickets_text{
       font-size: .5rem;
   }
   .ticket_name{

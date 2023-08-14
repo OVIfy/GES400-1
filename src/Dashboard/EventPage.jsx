@@ -173,7 +173,7 @@ function EventPage() {
                 <p className="about_description">
                   {user?.bio || 'No Bio Yet'}
                 </p>
-                <h3 className="details_subhead"> Has hosted {user?.createdevents?.length == 1 ? user?.createdevents?.length + ' event' : user?.createdevents?.length + 'events'}  on Primavera</h3>
+                <h3 className="details_subhead"> Has hosted {user?.createdevents?.length == 1 ? user?.createdevents?.length + ' event' : user?.createdevents?.length + 'events'}  on Easy Events</h3>
                 <span className="about_socials">
                   <a href={user?.facebook || '#facebook link goes here'}><AiOutlineFacebook className="social_icon1"/></a>
                   <a href={user?.instagram || '#instagram link goes here'}><AiOutlineInstagram className="social_icon1"/></a>

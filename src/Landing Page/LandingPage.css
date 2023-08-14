@@ -101,6 +101,8 @@
 .third_head{
     font-size: 1.2rem;
     font-weight: 700;
+    width: 80%;
+    text-transform: capitalize;
 }
 .third_text{
     font-size: .9rem;
@@ -137,10 +139,15 @@
 .fourth_section{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background: #F0F5FA;
     padding: 3% 5%;
     gap: 2rem;
+}
+.fourth_style{
+    width: 50%;
+    text-align: center;
 }
 .fourth_grid{
     height: 30rem;
@@ -196,14 +203,14 @@
     gap: 1rem;
 }
 .sixth_section{
-    height: 10rem;
+    height: 13rem;
     padding: 3% 5%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .sixth_style{
-    width: 70%;
+    width: 40%;
     text-align: center;
 }
 .differ{
