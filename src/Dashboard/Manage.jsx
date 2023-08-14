@@ -15,7 +15,7 @@ import Loading from "./Loading"
 const Manage = (props) => {
     const [createdEvents, setCreatedEvents] = useState([])
     const [InterestedEvents, setInterestedEvents] = useState([])
-    const { data, error, isLoading } = useSWR(import.meta.env.VITE_SERVER_URL  + `/api/users/${getUserFromSession()?.id}?populate[createdevents][populate][0]=cover&populate[likes][populate][0]=cover&populate[createdevents][populate][1]=likedby&populate[likes][populate][1]=likedby`, fetcher, { refreshInterval : 100 });
+    const { data, error, isLoading } = useSWR(import.meta.env.VITE_SERVER_URL  + `/api/users/${getUserFromSession()?.id}?populate[createdevents][populate][0]=cover&populate[likes][populate][0]=cover&populate[createdevents][populate][1]=likedby&populate[likes][populate][1]=likedby&populate[createdevents][populate][2]=tickets`, fetcher, { refreshInterval : 100 });
 
     if(error) console.log(error)
     if(data) console.log(data)
@@ -50,6 +50,7 @@ const Manage = (props) => {
                                 afterClick={handleHeartClick}
                                 eventId={event.id}
                                 interested={event?.likedby?.length}
+                                going={event?.tickets?.length}
                             />)
                             
                     }
